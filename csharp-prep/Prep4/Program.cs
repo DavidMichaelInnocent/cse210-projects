@@ -4,12 +4,16 @@ class Program
 {
     static void Main(string[] args)
     {
+        {
+           Console.WriteLine("Please Enter a list of  numbers: type 0 when finished.");
+        }
         List<int> numbers = new List<int>();
 
         int getnumber = -1;
         while (getnumber != 0)
         {
-            Console.Write("Please Enter a list of  numbers: type 0 when finished. ");
+
+            Console.Write("Enter a numbers: ");
 
             string reponse = Console.ReadLine();
             getnumber = int.Parse(reponse);
