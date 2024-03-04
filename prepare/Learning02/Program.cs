@@ -15,10 +15,10 @@ class Program
         job2._endYear = 2023;
 
         Job job3 = new Job();
-        job3._jobTitle = "Data Analytic";
-        job3._company = "Metadata";
+        job3._jobTitle = "Computer Programmin";
+        job3._company = "Meta Programmin";
         job3._startYear = 2023;
-        job3._endYear = 2023;
+        job3._endYear = 2024;
 
         Resume myResume = new Resume();
         myResume._name = "Allison Rose";
