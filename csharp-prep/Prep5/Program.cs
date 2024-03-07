@@ -1,48 +1,50 @@
 using System;
 
-class Program
+class program
 {
     static void Main(string[] args)
     {
-        DisplayWelcomeMessage();
+        Console.WriteLine();
+        
+        DisplayWelcome();
 
-        string userName = PromptUserName();
-        int userNumber = PromptUserNumber();
+        
+        string name = PromptUserName();
 
-        int squaredNumber = SquareNumber(userNumber);
+        
+        int favoriteNumber = PromptUserNumber();
 
-        DisplayResult(userName, squaredNumber);
+        
+        int squaredNumber = SquareNumber(favoriteNumber);
+
+        
+        DisplayResult(name, squaredNumber);
     }
 
-    static void DisplayWelcomeMessage()
+    static void DisplayWelcome()
     {
         Console.WriteLine("Welcome to the program!");
     }
 
     static string PromptUserName()
     {
-        Console.Write("Please enter your name: ");
-        string name = Console.ReadLine();
-
-        return name;
+        Console.WriteLine("Please enter your name: ");
+        return Console.ReadLine();
     }
 
     static int PromptUserNumber()
     {
-        Console.Write("Please enter your favorite number: ");
-        int number = int.Parse(Console.ReadLine());
-
-        return number;
+        Console.WriteLine("Please enter your favorite number: ");
+        return int.Parse(Console.ReadLine());
     }
 
     static int SquareNumber(int number)
     {
-        int square = number * number;
-        return square;
+        return number * number;
     }
 
-    static void DisplayResult(string name, int square)
+    static void DisplayResult(string name, int squaredNumber)
     {
-        Console.WriteLine($"{name}, the square of your number is {square}");
+        Console.WriteLine("{0}, the square of your number is {1}", name, squaredNumber);
     }
 }
