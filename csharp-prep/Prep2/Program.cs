@@ -1,45 +1,65 @@
 using System;
 
-class Program
+class GradeCalculator
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Enter your grade percentage: ");
+        Console.WriteLine();
         
-        float grade = float.Parse(Console.ReadLine());
+        Console.WriteLine("Enter your grade percentage: ");
+        string input = Console.ReadLine();
+        double grade;
 
-        string finalGrade;
+        
+        if (!double.TryParse(input, out grade))
+        {
+            Console.WriteLine("Invalid input. Please enter a numerical grade.");
+            return;
+        }
+
+        
+        string letterGrade = DetermineLetterGrade(grade);
+        string passMessage = grade >= 70 ? "Congratulations! You passed the course." : "Keep at it, and you'll succeed next time!";
+
+        
+        Console.WriteLine($"Your grade is {letterGrade}. {passMessage}");
+    }
+
+    static string DetermineLetterGrade(double grade)
+    {
+        string letter;
 
         if (grade >= 90)
         {
-            finalGrade = "A";
+            letter = "A";
         }
         else if (grade >= 80)
         {
-            finalGrade = "B";
+            letter = "B";
         }
         else if (grade >= 70)
         {
-            finalGrade = "C";
+            letter = "C";
         }
         else if (grade >= 60)
         {
-            finalGrade = "D";
+            letter = "D";
         }
         else
         {
-            finalGrade = "F";
+            letter = "F";
         }
 
-        Console.WriteLine("Your final letter grade is: " + finalGrade);
+        
+        if (letter != "F" && letter != "A")
+        {
+            char sign = grade % 10 >= 7 ? '+' : (grade % 10 < 3 ? '-' : ' ');
+            letter += sign;
+        }
 
-        if (grade >= 70)
-        {
-            Console.WriteLine("Congrats!! You passed");
-        }
-        else
-        {
-            Console.WriteLine("You did not pass, sorry.");
-        }
+        
+        letter = grade >= 100 ? "A" : (grade < 0 ? "F" : letter);
+
+        return letter;
     }
 }
