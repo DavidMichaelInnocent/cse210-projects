@@ -8,6 +8,7 @@ class Program
         Journal journal = new Journal();
 
         // Display a welcome message
+        Console.Write("");
         Console.WriteLine("Welcome to the Journal App!");
 
         // Create a variable to store the user's choice
