@@ -1,62 +1,87 @@
 using System;
 
-class Program
+namespace DailyJournal
 {
-    static void Main(string[] args)
+    class Program
     {
-        Console.WriteLine("");
-        // Create a new journal
-        Journal journal = new Journal();
-
-        // Display a welcome message
-        Console.WriteLine("Welcome to the Journal App!");
-
-        // Create a variable to store the user's choice
-        int choice = 0;
-
-        // Create a loop to display the menu until the user exits
-        while (choice != 5)
+        static void Main(string[] args)
         {
-            // Display the menu options
-            Console.WriteLine("Please choose an option:");
-            Console.WriteLine("1. Write a new entry");
-            Console.WriteLine("2. Display the journal");
-            Console.WriteLine("3. Save the journal to a file");
-            Console.WriteLine("4. Load the journal from a file");
-            Console.WriteLine("5. Exit");
+            Journal journal = new Journal();
 
-            // Get the user's choice as an integer
-            choice = int.Parse(Console.ReadLine());
-
-            // Handle the user's choice using a switch statement
-            switch (choice)
+            List<string> prompts = new List<string>
             {
-                case 1:
-                    // Call the AddEntry method of the journal
-                    journal.AddEntry();
-                    break;
-                case 2:
-                
-                    // Call the DisplayJournal method of the journal
-                    journal.DisplayJournal();
-                    break;
-                case 3:
-                    // Call the SaveJournal method of the journal
-                    journal.SaveJournal();
-                    break;
-                case 4:
-                    // Call the LoadJournal method of the journal
-                    journal.LoadJournal();
-                    break;
-                case 5:
-                    // Display a farewell message and exit the loop
-                    Console.WriteLine("Thank you for using the Journal App!");
-                    break;
-                default:
-                    // Display an error message for invalid choices
-                    Console.WriteLine("Invalid option. Please try again.");
-                    break;
+                "Did anything unexpected happen today that surprised you? ",
+                "What was the most challenging thing you faced today and how did you overcome it? ",
+                "What was the best moment of your day and why? ",
+                "Who did you share a special moment with today? ",
+                "Did you discover anything new or learn something interesting today? ",
+                "Did someone make you feel special or make you smile today?" ,
+                "Did you achieve any success in your work, studies or personal projects today? ",
+                "Did you do anything today that took you out of your comfort zone? ",
+                "What would you like to do more of in your daily life and how do you plan to achieve it? ",
+                "What do you most wish for tomorrow? ",
+                "How did you show love or compassion towards others today, inspired by your faith? ",
+                "Did you receive any unexpected blessings today that you attribute to your faith? If so, can you describe them? ",
+                "What was the most inspiring thing you heard or read today that strengthened your faith? ",
+                "How did you feel God's presence in your life today? ",
+                "What was the most meaningful spiritual experience you had today? ",
+                "How did you demonstrate your faith through actions or choices you made today? ",
+            };
+
+            bool quit = false;
+            while (!quit)
+            {
+                Console.WriteLine("\nWelcome to the Journal Program");
+                Console.WriteLine("Please Select one of the following choices:");
+                Console.WriteLine("1. Write");
+                Console.WriteLine("2. Display");
+                Console.WriteLine("3. Save");
+                Console.WriteLine("4. Load");
+                Console.WriteLine("5. Quit");
+
+                Console.WriteLine("\nWhat would you like to do? ");
+                string choice = Console.ReadLine();
+
+                switch (choice)
+                {
+                    case "1":
+                        string prompt = GetRandomPrompt(prompts);
+                        journal.AddEntry(prompt);
+                        break;
+                    case "2":
+                        journal.DisplayEntries();
+                        break;
+                    case "3":
+                        journal.SaveToFile();
+                        break;
+                    case "4":
+                        journal.LoadFromFile();
+                        break;
+                    case "5":
+                        quit = true;
+                        break;
+                    default:
+                        Console.WriteLine("Invalid choice.");
+                        break;
+                }
             }
+
+            
+            Console.WriteLine("Until next time, keep writing!");
+        }
+
+        static string GetRandomPrompt(List<string> prompts)
+        {
+            Random random = new Random();
+            int index = random.Next(prompts.Count);
+            return prompts[index];
         }
     }
 }
+
+
+
+
+
+
+

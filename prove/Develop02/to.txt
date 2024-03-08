@@ -1,0 +1,3 @@
+Date,Prompt,Response
+03/08/2024,What would you like to do more of in your daily life and how do you plan to achieve it? ,apply
+03/08/2024,How did you demonstrate your faith through actions or choices you made today? ,happy
