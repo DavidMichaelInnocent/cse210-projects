@@ -32,7 +32,7 @@ namespace Journal_App
 
         public override string ToString()
         {
-            return $"Date:> {_date} \nYour Prompt:> {_prompt} \nYour Response:> {_response}\n";
+            return $"Date:>  {_date} \nYour Prompt:>  {_prompt} \nYour Response:>  {_response}\n";
         }
     }
 }
