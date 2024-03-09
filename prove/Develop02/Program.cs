@@ -60,7 +60,7 @@ namespace Journal_App
                         abort = true;
                         break;
                     default:
-                        Console.WriteLine("Invalid choice.");
+                        Console.WriteLine("Wrong Choice Retry Back.");
                         break;
                 }
             }
