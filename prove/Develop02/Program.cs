@@ -80,4 +80,4 @@ namespace Journal_App
 
 // Show creativity and Exceed the requirements. I Write  Save other information in the journal entry. 
 // It accomplishes this by creating an Entry class that stores the date, prompt, and user response. 
-// This information is then saved to a CSV file using the SaveToFile method which will allow the user to open the save_files in Excel app and can be use.
+// This information is then saved to a CSV file using the SaveToFile method which will allow the user to open the save_files in Excel app, and can be use.
