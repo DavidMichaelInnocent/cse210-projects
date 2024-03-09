@@ -1,6 +1,6 @@
 using System;
 
-namespace DailyJournal
+namespace Journal_App
 {
     class Entry
     {
@@ -32,7 +32,7 @@ namespace DailyJournal
 
         public override string ToString()
         {
-            return $"Date: {_date} - Prompt: {_prompt} \n{_response}\n";
+            return $"Date: {_date} \nYour Prompt: {_prompt} \nYour response: {_response}\n";
         }
     }
 }

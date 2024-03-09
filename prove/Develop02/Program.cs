@@ -1,6 +1,6 @@
 using System;
 
-namespace DailyJournal
+namespace Journal_App
 {
     class Program
     {
@@ -10,36 +10,35 @@ namespace DailyJournal
 
             List<string> prompts = new List<string>
             {
-                "Did anything unexpected happen today that surprised you? ",
-                "What was the most challenging thing you faced today and how did you overcome it? ",
-                "What was the best moment of your day and why? ",
-                "Who did you share a special moment with today? ",
-                "Did you discover anything new or learn something interesting today? ",
-                "Did someone make you feel special or make you smile today?" ,
-                "Did you achieve any success in your work, studies or personal projects today? ",
-                "Did you do anything today that took you out of your comfort zone? ",
-                "What would you like to do more of in your daily life and how do you plan to achieve it? ",
-                "What do you most wish for tomorrow? ",
-                "How did you show love or compassion towards others today, inspired by your faith? ",
-                "Did you receive any unexpected blessings today that you attribute to your faith? If so, can you describe them? ",
-                "What was the most inspiring thing you heard or read today that strengthened your faith? ",
-                "How did you feel God's presence in your life today? ",
-                "What was the most meaningful spiritual experience you had today? ",
-                "How did you demonstrate your faith through actions or choices you made today? ",
+                "What was the best part of my day?",
+                "How did i see the hand of the lord in my life todsy?",
+                "What was the stongest emotion i felt today?",
+                "If had one thing to do over today, what could it be?",
+                "How as the Book Of Mormon helps you develope your faith in Jesus Christ?",
+                "Did you believe that God is our eternal father?",
+                "Did you believe that Jesus Christ is the son of God?",
+                "How have you strongest develope your faith in Savior Jesus Christ?",
+                "When last did you study come follow me manual?",
+                "When last did you experience obstacle in your life?",
+                "Did have testimony about The church of JESUS CHRIST of later-day saint?",
+                "Write anything that could be a life remembrace for you."
             };
 
-            bool quit = false;
-            while (!quit)
+            bool abort = false;
+            while (!abort)
             {
-                Console.WriteLine("\nWelcome to the Journal Program");
-                Console.WriteLine("Please Select one of the following choices:");
-                Console.WriteLine("1. Write");
-                Console.WriteLine("2. Display");
-                Console.WriteLine("3. Save");
-                Console.WriteLine("4. Load");
-                Console.WriteLine("5. Quit");
+                Console.WriteLine("\nWelcome to the Daily_Journal Program App!");
+                
+                Console.WriteLine("\nWhat do you want to do, select your choice just number from 1 to 4.:");
+                
+                Console.WriteLine("1. New_Write.");
+                Console.WriteLine("2. Display_Write.");
+                Console.WriteLine("3. Save_Write.");
+                Console.WriteLine("4. Load_Save");
+                Console.WriteLine("5. Quit_App");
 
-                Console.WriteLine("\nWhat would you like to do? ");
+                Console.WriteLine("\nWhat would you like to do today? ");
+                Console.WriteLine();
                 string choice = Console.ReadLine();
 
                 switch (choice)
@@ -58,7 +57,7 @@ namespace DailyJournal
                         journal.LoadFromFile();
                         break;
                     case "5":
-                        quit = true;
+                        abort = true;
                         break;
                     default:
                         Console.WriteLine("Invalid choice.");
@@ -67,7 +66,7 @@ namespace DailyJournal
             }
 
             
-            Console.WriteLine("Until next time, keep writing!");
+            Console.WriteLine("Come back latter an try again, thanks!");
         }
 
         static string GetRandomPrompt(List<string> prompts)
@@ -79,9 +78,6 @@ namespace DailyJournal
     }
 }
 
-
-
-
-
-
-
+// Show creativity and Exceed the requirements. I Write  Save other information in the journal entry. 
+// It accomplishes this by creating an Entry class that stores the date, prompt, and user response. 
+// This information is then saved to a CSV file using the SaveToFile method which will allow user to open in Excel app.

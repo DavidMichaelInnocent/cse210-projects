@@ -1,6 +1,6 @@
 using System;
 
-namespace DailyJournal
+namespace Journal_App
 {
     class Journal
     {
@@ -41,7 +41,7 @@ namespace DailyJournal
                 }
             }
 
-            Console.WriteLine("Saved");
+            Console.WriteLine("Succesfully Saved.");
         }
 
         public void LoadFromFile()
@@ -67,7 +67,7 @@ namespace DailyJournal
                 }
             }
 
-            Console.WriteLine("Loaded");
+            Console.WriteLine("Loaded Completed.");
         }
     }
 }
