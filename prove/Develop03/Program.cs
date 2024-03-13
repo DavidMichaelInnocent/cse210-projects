@@ -52,3 +52,13 @@ namespace MyScripture
         }
     }
 }
+
+/*
+Show creativity and Exceeded requirement.
+1. Offering a Choice of Scriptures:
+ * The program lets the user choose from two scriptures to memorize, rather than just working with a single one.
+2. Allowing for Multiple Verses:
+ * It can handle scriptures with multiple verses, such as "Proverbs 3:5-6", demonstrating flexibility in scripture selection.
+3. Preventing Repetition of Already-Hidden Words:
+ * When selecting random words to hide, it only chooses from words that are not already hidden, making the memorization process more challenging and effective.
+*/
