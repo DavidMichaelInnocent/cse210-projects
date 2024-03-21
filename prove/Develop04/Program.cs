@@ -25,7 +25,7 @@ class Program
             Console.Clear();
             DisplayLog();
             Console.WriteLine("Here is the Menu Options:");
-            Console.WriteLine("Choose between 1-4");
+            Console.WriteLine("Choose between 1-4 or press 5 to quit");
             Console.WriteLine("1. Start breathing activity");
             Console.WriteLine("2. Start reflecting activity");
             Console.WriteLine("3. Start listing activity");
