@@ -85,3 +85,10 @@ class Program
         Environment.Exit(0);
     }
 }
+
+/*
+Showing Creativity and exceeding the core requirements here is the following:
+ * I added Tracking activity logs (breathingLog, reflectingLog, and listingLog) and displaying them using the DisplayLog function.
+ * I Implementing a sports activity (SportActivity) with a list of sports and prompting the user to choose their favorite.
+
+*/
